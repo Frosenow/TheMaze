@@ -66,8 +66,25 @@ void ACFPSCharacter::LookUpAtRate(float Value)
 	AddControllerPitchInput(Value * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
+//Finds the character viewpoint and trace forward into the world
+void ACFPSCharacter::InteractPressed()
+{
+	FVector Loc; 
+	FRotator Rot; 
+	FHitResult Hit; 
 
-// Called to bind functionality to input
+	GetController()->GetPlayerViewPoint(Loc, Rot);
+
+	FVector Start = Loc;
+	FVector End = Start + (Rot.Vector() * 2000);
+
+	FCollisionQueryParams TraceParams; 
+	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, TraceParams);
+
+}
+
+
+// Called to bind functionality keys to input
 void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -75,9 +92,11 @@ void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	//Jump is a built in function of ACharacter class 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Interact", IE_Released, this, &ACFPSCharacter::InteractPressed);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ACFPSCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ACFPSCharacter::MoveRight);
+	
 
 	//AActor is a child class of APawn 
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
