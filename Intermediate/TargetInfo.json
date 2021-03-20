@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TheMaze",
+			"Path": "C:\\1 Projekt Obiektowe\\TheMazeGame\\TheMaze\\TheMaze\\Source\\TheMaze.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TheMazeEditor",
+			"Path": "C:\\1 Projekt Obiektowe\\TheMazeGame\\TheMaze\\TheMaze\\Source\\TheMazeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

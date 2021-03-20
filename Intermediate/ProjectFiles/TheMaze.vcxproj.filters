@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TheMaze.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{9955DF47-4FC3-40AC-B6D8-8B5DC3704DE1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TheMaze.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TheMazeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{8819683C-7AC1-42B6-8D12-04147C409A40}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TheMaze">
+      <UniqueIdentifier>{9A962A06-C0FC-4C4D-B142-E9A7EA7D0528}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TheMaze\TheMaze.Build.cs">
+      <Filter>Source\TheMaze</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TheMaze\TheMaze.cpp">
+      <Filter>Source\TheMaze</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TheMaze\TheMaze.h">
+      <Filter>Source\TheMaze</Filter>
+    </ClInclude>
+    <Filter Include="Source\TheMaze\Private">
+      <UniqueIdentifier>{5C97A050-5373-4288-B46F-7B434B371A62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TheMaze\Private\Characters">
+      <UniqueIdentifier>{CE7A35A1-BCE4-488D-B95F-33F2346CDDA6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TheMaze\Private\Characters\CFPSCharacter.cpp">
+      <Filter>Source\TheMaze\Private\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\TheMaze\Public">
+      <UniqueIdentifier>{8620EB26-EF5B-492F-A581-8D6C40807935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TheMaze\Public\Characters">
+      <UniqueIdentifier>{FB5A3D0D-12EF-4830-B2A9-A215E9A3ED52}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\TheMaze\Public\Characters\CFPSCharacter.h">
+      <Filter>Source\TheMaze\Public\Characters</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
