@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/Controller.h"
+#include "DrawDebugHelpers.h"
 
 
 
@@ -27,6 +28,7 @@ ACFPSCharacter::ACFPSCharacter()
 
 	BaseTurnRate = 45.0f;
 	BaseLookUpRate = 45.0f;
+	TraceDistance = 2000; 
 }
 
 
@@ -66,23 +68,35 @@ void ACFPSCharacter::LookUpAtRate(float Value)
 	AddControllerPitchInput(Value * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-//Finds the character viewpoint and trace forward into the world
+//Calls the TraceForward_Implementation() directly from Blueprint
 void ACFPSCharacter::InteractPressed()
 {
-	FVector Loc; 
-	FRotator Rot; 
-	FHitResult Hit; 
+	TraceForward(); 
+}
+
+//Finds the character viewpoint and trace forward into the world
+void ACFPSCharacter::TraceForward_Implementation()
+{
+	FVector Loc;
+	FRotator Rot;
+	FHitResult Hit;
 
 	GetController()->GetPlayerViewPoint(Loc, Rot);
 
 	FVector Start = Loc;
-	FVector End = Start + (Rot.Vector() * 2000);
+	FVector End = Start + (Rot.Vector() * TraceDistance);
 
-	FCollisionQueryParams TraceParams; 
-	GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, TraceParams);
+	FCollisionQueryParams TraceParams;
+	bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, TraceParams);
 
+	DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 2.0f);
+
+	//Create HitBox if TraceLine hit object
+	if (bHit)
+	{
+		DrawDebugBox(GetWorld(), Hit.ImpactPoint, FVector(8, 8, 8), FColor::Red, false, 2.0f);
+	}
 }
-
 
 // Called to bind functionality keys to input
 void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

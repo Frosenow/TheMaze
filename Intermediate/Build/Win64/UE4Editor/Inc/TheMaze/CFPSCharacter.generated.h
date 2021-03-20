@@ -14,8 +14,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define THEMAZE_CFPSCharacter_generated_h
 
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS \
+	virtual void TraceForward_Implementation(); \
+ \
+	DECLARE_FUNCTION(execTraceForward);
+
+
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execTraceForward);
+
+
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_EVENT_PARMS
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACFPSCharacter(); \
@@ -60,16 +71,21 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACFPSCharacter); \
 
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BaseTurnRate() { return STRUCT_OFFSET(ACFPSCharacter, BaseTurnRate); } \
-	FORCEINLINE static uint32 __PPO__BaseLookUpRate() { return STRUCT_OFFSET(ACFPSCharacter, BaseLookUpRate); }
+	FORCEINLINE static uint32 __PPO__BaseLookUpRate() { return STRUCT_OFFSET(ACFPSCharacter, BaseLookUpRate); } \
+	FORCEINLINE static uint32 __PPO__TraceDistance() { return STRUCT_OFFSET(ACFPSCharacter, TraceDistance); }
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_10_PROLOG
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_10_PROLOG \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_EVENT_PARMS
+
+
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_STANDARD_CONSTRUCTORS \
 public: \
@@ -82,6 +98,7 @@ public: \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
 	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_ENHANCED_CONSTRUCTORS \
 private: \

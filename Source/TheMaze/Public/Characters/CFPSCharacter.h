@@ -39,6 +39,13 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play");
 	float BaseLookUpRate; 
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
+	float TraceDistance;
+
+	UFUNCTION(BlueprintNativeEvent)
+	void TraceForward();
+	void TraceForward_Implementation(); 
 public:	
 
 	// Called to bind functionality to input
