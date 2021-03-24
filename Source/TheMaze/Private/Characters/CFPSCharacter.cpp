@@ -1,6 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Characters/CFPSCharacter.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -14,7 +11,7 @@
 // Sets default values
 ACFPSCharacter::ACFPSCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	// Set this character to call Tick() every frame. 
 	PrimaryActorTick.bCanEverTick = false;
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
@@ -34,12 +31,12 @@ ACFPSCharacter::ACFPSCharacter()
 
 void ACFPSCharacter::MoveForward(float Value)
 {
-	//Controller is a method in Pawn Class
-	//Controller currently possessing the Actor
+	// Controller is a method in Pawn Class
+	// Controller currently possessing the Actor
 	if ((Controller) && (Value != 0.0f))
 	{
-		const FRotator Rotation = Controller->GetControlRotation(); //Pitch - Y Axis, Yawn - Z Axis, Roll - X Axis 
-		const FRotator YawRotation(0, Rotation.Yaw, 0); //X, Y, Z
+		const FRotator Rotation = Controller->GetControlRotation(); // Pitch - Y Axis, Yawn - Z Axis, Roll - X Axis 
+		const FRotator YawRotation(0, Rotation.Yaw, 0); // X, Y, Z
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 		AddMovementInput(Direction, Value); //Value = Speed
@@ -50,8 +47,8 @@ void ACFPSCharacter::MoveRight(float Value)
 {
 	if ((Controller) && (Value != 0.0f))
 	{
-		const FRotator Rotation = Controller->GetControlRotation(); //Pitch - Y Axis, Yawn - Z Axis, Roll - X Axis 
-		const FRotator YawRotation(0, Rotation.Yaw, 0); //X, Y, Z
+		const FRotator Rotation = Controller->GetControlRotation(); // Pitch - Y Axis, Yawn - Z Axis, Roll - X Axis 
+		const FRotator YawRotation(0, Rotation.Yaw, 0); // X, Y, Z
 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		AddMovementInput(Direction, Value);
@@ -60,7 +57,7 @@ void ACFPSCharacter::MoveRight(float Value)
 
 void ACFPSCharacter::TurnUpRate(float Value)
 {
-	AddControllerYawInput(Value * BaseTurnRate * GetWorld()->GetDeltaSeconds()); //Delta seconds make frame rate independent
+	AddControllerYawInput(Value * BaseTurnRate * GetWorld()->GetDeltaSeconds()); // Delta seconds make frame rate independent
 }
 
 void ACFPSCharacter::LookUpAtRate(float Value)
@@ -68,13 +65,13 @@ void ACFPSCharacter::LookUpAtRate(float Value)
 	AddControllerPitchInput(Value * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-//Calls the TraceForward_Implementation() directly from Blueprint
+// Calls the TraceForward_Implementation() directly from Blueprint
 void ACFPSCharacter::InteractPressed()
 {
 	TraceForward(); 
 }
 
-//Finds the character viewpoint and trace forward into the world
+// Finds the character viewpoint and trace forward into the world
 void ACFPSCharacter::TraceForward_Implementation()
 {
 	FVector Loc;
@@ -91,7 +88,7 @@ void ACFPSCharacter::TraceForward_Implementation()
 
 	DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 2.0f);
 
-	//Create HitBox if TraceLine hit object
+	// Create HitBox if TraceLine hit object
 	if (bHit)
 	{
 		DrawDebugBox(GetWorld(), Hit.ImpactPoint, FVector(8, 8, 8), FColor::Red, false, 2.0f);
@@ -103,7 +100,7 @@ void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	//Jump is a built in function of ACharacter class 
+	// Jump is a built in function of ACharacter class 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAction("Interact", IE_Released, this, &ACFPSCharacter::InteractPressed);
@@ -112,7 +109,7 @@ void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("MoveRight", this, &ACFPSCharacter::MoveRight);
 	
 
-	//AActor is a child class of APawn 
+	// AActor is a child class of APawn 
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
