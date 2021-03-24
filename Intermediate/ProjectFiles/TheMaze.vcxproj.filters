@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TheMaze.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9955DF47-4FC3-40AC-B6D8-8B5DC3704DE1}</UniqueIdentifier>
+      <UniqueIdentifier>{5979A621-61A5-45D5-998C-9BF117BFE29A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TheMaze.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,12 @@
     <None Include="..\..\Source\TheMazeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\ActorMovingControl.ini" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8819683C-7AC1-42B6-8D12-04147C409A40}</UniqueIdentifier>
+      <UniqueIdentifier>{3F8694BD-1063-4064-B22C-BBA21231D485}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +27,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\TheMaze">
-      <UniqueIdentifier>{9A962A06-C0FC-4C4D-B142-E9A7EA7D0528}</UniqueIdentifier>
+      <UniqueIdentifier>{2A307D86-ED49-49EB-8130-A83676B44F84}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TheMaze\TheMaze.Build.cs">
       <Filter>Source\TheMaze</Filter>
@@ -36,19 +43,25 @@
       <Filter>Source\TheMaze</Filter>
     </ClInclude>
     <Filter Include="Source\TheMaze\Private">
-      <UniqueIdentifier>{5C97A050-5373-4288-B46F-7B434B371A62}</UniqueIdentifier>
+      <UniqueIdentifier>{095B637E-D2B6-4848-85BA-D174CC74CCAB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TheMaze\Private\Collectible.cpp">
+      <Filter>Source\TheMaze\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TheMaze\Private\Collectible.h">
+      <Filter>Source\TheMaze\Private</Filter>
+    </ClInclude>
     <Filter Include="Source\TheMaze\Private\Characters">
-      <UniqueIdentifier>{CE7A35A1-BCE4-488D-B95F-33F2346CDDA6}</UniqueIdentifier>
+      <UniqueIdentifier>{CCB53D81-C325-4E5D-8356-0A5F8EB726A9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TheMaze\Private\Characters\CFPSCharacter.cpp">
       <Filter>Source\TheMaze\Private\Characters</Filter>
     </ClCompile>
     <Filter Include="Source\TheMaze\Public">
-      <UniqueIdentifier>{8620EB26-EF5B-492F-A581-8D6C40807935}</UniqueIdentifier>
+      <UniqueIdentifier>{9E95E583-7B7C-4188-B337-1CE2A13046C8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TheMaze\Public\Characters">
-      <UniqueIdentifier>{FB5A3D0D-12EF-4830-B2A9-A215E9A3ED52}</UniqueIdentifier>
+      <UniqueIdentifier>{98678B3F-9E0F-4885-A1C7-3BF692EBC034}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TheMaze\Public\Characters\CFPSCharacter.h">
       <Filter>Source\TheMaze\Public\Characters</Filter>
