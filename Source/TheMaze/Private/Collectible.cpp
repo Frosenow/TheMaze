@@ -23,7 +23,30 @@ ACollectible::ACollectible()
 void ACollectible::BeginPlay()
 {
 	Super::BeginPlay();
+	PlayEffects(); 
 	
+}
+
+void ACollectible::PlayEffects()
+{
+	// Spawns Particles at CollectibleSphere location
+	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation());
+}
+
+// Notify when Player is overlap with CollectibleSphere 
+void ACollectible::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	//Triggers when actor walking through object
+	Super::NotifyActorBeginOverlap(OtherActor);
+
+	PlayEffects();
+	ACollectible* MyCharacter = Cast <ACollectible>(OtherActor);
+	if(MyCharacter)
+	{
+		MyCharacter->bIsCarryingObjective = true;
+		CarriedObjects++; 
+		Destroy(); 
+	}
 }
 
 

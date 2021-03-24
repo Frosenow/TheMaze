@@ -60,7 +60,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACollectible); \
 
 #define TheMaze_Source_TheMaze_Private_Collectible_h_10_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MeshComp() { return STRUCT_OFFSET(ACollectible, MeshComp); } \
-	FORCEINLINE static uint32 __PPO__SphereComp() { return STRUCT_OFFSET(ACollectible, SphereComp); }
+	FORCEINLINE static uint32 __PPO__SphereComp() { return STRUCT_OFFSET(ACollectible, SphereComp); } \
+	FORCEINLINE static uint32 __PPO__PickupFX() { return STRUCT_OFFSET(ACollectible, PickupFX); } \
+	FORCEINLINE static uint32 __PPO__CarriedObjects() { return STRUCT_OFFSET(ACollectible, CarriedObjects); }
 
 
 #define TheMaze_Source_TheMaze_Private_Collectible_h_7_PROLOG
