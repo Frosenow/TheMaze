@@ -3,7 +3,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/GameplayStatics.h"
-
+#include "Characters/CFPSCharacter.h"
 
 // Sets default values
 ACollectible::ACollectible()
@@ -23,8 +23,7 @@ ACollectible::ACollectible()
 void ACollectible::BeginPlay()
 {
 	Super::BeginPlay();
-	PlayEffects(); 
-	
+	PlayEffects(); 	
 }
 
 void ACollectible::PlayEffects()
@@ -38,13 +37,15 @@ void ACollectible::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	//Triggers when actor walking through object
 	Super::NotifyActorBeginOverlap(OtherActor);
-
+	
 	PlayEffects();
-	ACollectible* MyCharacter = Cast <ACollectible>(OtherActor);
+
+	// Need to cast it for the compiler to know which method belong to Character 
+	ACFPSCharacter* MyCharacter = Cast <ACFPSCharacter>(OtherActor);
 	if(MyCharacter)
 	{
-		MyCharacter->bIsCarryingObjective = true;
-		CarriedObjects++; 
+		MyCharacter->bIsCarryingObjective = true; 
+		
 		Destroy(); 
 	}
 }

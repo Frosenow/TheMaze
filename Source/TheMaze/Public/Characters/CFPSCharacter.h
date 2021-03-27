@@ -25,6 +25,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Play");
 	UStaticMeshComponent* MeshComp; 
 
+	// Tell if actor overlap with CollectibleSphere
+	UPROPERTY(BlueprintReadOnly, Category = "Gameplay")
+	bool bIsCarryingObjective;
 
 protected:
 
@@ -46,6 +49,7 @@ protected:
 	UFUNCTION(BlueprintNativeEvent)
 	void TraceForward();
 	void TraceForward_Implementation(); 
+
 public:	
 
 	// Called to bind functionality to input

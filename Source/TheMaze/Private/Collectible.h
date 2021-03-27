@@ -12,7 +12,6 @@ class ACollectible : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ACollectible();
-	
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,11 +26,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 	UParticleSystem* PickupFX; 
 
-	UPROPERTY(EditDefaultsOnly, Category = "Effects")
-	unsigned int CarriedObjects = 0; 
-
 	void PlayEffects(); 
-	bool bIsCarryingObjective;
+	
 
 public:	
 

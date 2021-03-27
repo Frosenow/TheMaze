@@ -87,6 +87,11 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComp;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsCarryingObjective_MetaData[];
+#endif
+		static void NewProp_bIsCarryingObjective_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsCarryingObjective;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
@@ -141,6 +146,19 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_MeshComp = { "MeshComp", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, MeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_MeshComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_MeshComp_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "Comment", "// Tell if actor overlap with CollectibleSphere\n" },
+		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
+		{ "ToolTip", "Tell if actor overlap with CollectibleSphere" },
+	};
+#endif
+	void Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective_SetBit(void* Obj)
+	{
+		((ACFPSCharacter*)Obj)->bIsCarryingObjective = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective = { "bIsCarryingObjective", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ACFPSCharacter), &Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Play" },
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
@@ -165,6 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_SpringArmComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_CameraComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_MeshComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TraceDistance,
@@ -196,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACFPSCharacter, 2042538389);
+	IMPLEMENT_CLASS(ACFPSCharacter, 2545465144);
 	template<> THEMAZE_API UClass* StaticClass<ACFPSCharacter>()
 	{
 		return ACFPSCharacter::StaticClass();

@@ -48,9 +48,6 @@
     <ClCompile Include="..\..\Source\TheMaze\Private\Collectible.cpp">
       <Filter>Source\TheMaze\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TheMaze\Private\Collectible.h">
-      <Filter>Source\TheMaze\Private</Filter>
-    </ClInclude>
     <Filter Include="Source\TheMaze\Private\Characters">
       <UniqueIdentifier>{CCB53D81-C325-4E5D-8356-0A5F8EB726A9}</UniqueIdentifier>
     </Filter>
@@ -65,6 +62,11 @@
     </Filter>
     <ClInclude Include="..\..\Source\TheMaze\Public\Characters\CFPSCharacter.h">
       <Filter>Source\TheMaze\Public\Characters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TheMaze\Private\Collectible.h">
+      <Filter>Source\TheMaze\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
