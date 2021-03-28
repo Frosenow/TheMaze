@@ -51,9 +51,6 @@
     <ClInclude Include="..\..\Source\TheMaze\Private\Collectible.h">
       <Filter>Source\TheMaze\Private</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TheMaze\Private\ExtractionZone.cpp">
-      <Filter>Source\TheMaze\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\TheMaze\Private\FPSExtractionZone.cpp">
       <Filter>Source\TheMaze\Private</Filter>
     </ClCompile>
@@ -66,9 +63,6 @@
     <Filter Include="Source\TheMaze\Public">
       <UniqueIdentifier>{393A0CFB-6206-4D3D-9EB8-6F0B8C9EA89D}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\TheMaze\Public\ExtractionZone.h">
-      <Filter>Source\TheMaze\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\TheMaze\Public\FPSExtractionZone.h">
       <Filter>Source\TheMaze\Public</Filter>
     </ClInclude>

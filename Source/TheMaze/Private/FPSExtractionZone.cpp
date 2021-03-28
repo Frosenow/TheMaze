@@ -18,7 +18,7 @@ AFPSExtractionZone::AFPSExtractionZone()
 	BoxZone->SetHiddenInGame(false); // Shows object lines in game 
 
 	// *TEST FUNCTION - Trying different method* 
-	BoxZone->OnComponentBeginOverlap.AddDynamic(this, AFPSExtractionZone::HandleOverlap); // AddDynamic is a macro that "unfold" into a function, intellisence dont see it
+	BoxZone->OnComponentBeginOverlap.AddDynamic(this, &AFPSExtractionZone::HandleOverlap); // AddDynamic is a macro that "unfold" into a function, intellisence dont see it
 
 }
 
