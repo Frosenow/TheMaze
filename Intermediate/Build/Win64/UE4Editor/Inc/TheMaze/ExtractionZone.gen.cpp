@@ -158,14 +158,14 @@ void EmptyLinkFunctionForGeneratedCodeExtractionZone() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp_MetaData[] = {
-		{ "Category", "Components" },
+		{ "Category", "ExtractionZone" },
 		{ "Comment", "//Box shaped object\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/ExtractionZone.h" },
 		{ "ToolTip", "Box shaped object" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp = { "OverlapComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExtractionZone, OverlapComp), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp = { "OverlapComp", nullptr, (EPropertyFlags)0x00200800000a000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExtractionZone, OverlapComp), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AExtractionZone_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExtractionZone_Statics::NewProp_OverlapComp,
 	};
@@ -196,7 +196,7 @@ void EmptyLinkFunctionForGeneratedCodeExtractionZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AExtractionZone, 4205957613);
+	IMPLEMENT_CLASS(AExtractionZone, 1603528365);
 	template<> THEMAZE_API UClass* StaticClass<AExtractionZone>()
 	{
 		return AExtractionZone::StaticClass();

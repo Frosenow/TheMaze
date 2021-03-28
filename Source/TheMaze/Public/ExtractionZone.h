@@ -14,9 +14,9 @@ public:
 	AExtractionZone();
 
 protected:
-
+ 
 	//Box shaped object
-	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite) 
 	UBoxComponent* OverlapComp;
 
 	UFUNCTION()
