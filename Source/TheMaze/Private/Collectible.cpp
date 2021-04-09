@@ -45,7 +45,6 @@ void ACollectible::NotifyActorBeginOverlap(AActor* OtherActor)
 	if(MyCharacter)
 	{
 		MyCharacter->bIsCarryingObjective = true; 
-		
 		Destroy(); 
 	}
 }

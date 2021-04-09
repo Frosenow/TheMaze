@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTheMaze_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4B7D72C5,
+				0xBD76DF6E,
 				0x63DE2405,
 				METADATA_PARAMS(nullptr, 0)
 			};

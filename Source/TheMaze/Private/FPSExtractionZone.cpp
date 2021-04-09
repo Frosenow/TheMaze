@@ -1,6 +1,7 @@
 #include "FPSExtractionZone.h"
 #include "Components/BoxComponent.h"
 #include "Characters/CFPSCharacter.h"
+#include "Collectible.h"
 
 // Sets default values
 AFPSExtractionZone::AFPSExtractionZone()
@@ -38,10 +39,9 @@ void AFPSExtractionZone::Tick(float DeltaTime)
 
 void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	
 
 	ACFPSCharacter* MyPawn = Cast<ACFPSCharacter>(OtherActor);
-	if (MyPawn && MyPawn->bIsCarryingObjective)
+	if (MyPawn  && MyPawn->bIsCarryingObjective)
 	{
 		// Send output log if actor overlap with BoxZone and is carrying an objective
 		UE_LOG(LogTemp, Log, TEXT("Pawn overlapped with extractione zone"));

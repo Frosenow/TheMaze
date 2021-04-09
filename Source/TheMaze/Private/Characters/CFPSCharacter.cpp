@@ -25,7 +25,7 @@ ACFPSCharacter::ACFPSCharacter()
 
 	BaseTurnRate = 45.0f;
 	BaseLookUpRate = 45.0f;
-	TraceDistance = 2000; 
+	TraceDistance = 2000;
 }
 
 

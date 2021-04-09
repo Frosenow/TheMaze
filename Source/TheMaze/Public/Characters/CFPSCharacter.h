@@ -29,6 +29,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Gameplay")
 	bool bIsCarryingObjective;
 
+
 protected:
 
 	void MoveForward(float Value);
