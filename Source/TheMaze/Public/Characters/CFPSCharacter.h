@@ -16,19 +16,21 @@ public:
 	// Sets default values for this character's properties
 	ACFPSCharacter();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	USpringArmComponent* SpringArmComp; 
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* CameraComp; 
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Play");
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Play")
 	UStaticMeshComponent* MeshComp; 
 
 	// Tell if actor overlap with CollectibleSphere
 	UPROPERTY(BlueprintReadOnly, Category = "Gameplay")
 	bool bIsCarryingObjective;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction")
+	int Score;
 
 protected:
 
@@ -38,13 +40,13 @@ protected:
 	void LookUpAtRate(float Value);
 	void InteractPressed(); 
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play");
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play")
 	float BaseTurnRate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play");
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play")
 	float BaseLookUpRate; 
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction");
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction")
 	float TraceDistance;
 
 	UFUNCTION(BlueprintNativeEvent)

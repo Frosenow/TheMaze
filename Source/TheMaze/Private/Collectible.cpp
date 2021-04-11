@@ -28,7 +28,6 @@ void ACollectible::BeginPlay()
 
 void ACollectible::PlayEffects()
 {
-	// Spawns Particles at CollectibleSphere location
 	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation());
 }
 
@@ -44,6 +43,7 @@ void ACollectible::NotifyActorBeginOverlap(AActor* OtherActor)
 	ACFPSCharacter* MyCharacter = Cast <ACFPSCharacter>(OtherActor);
 	if(MyCharacter)
 	{
+		MyCharacter->Score++; 
 		MyCharacter->bIsCarryingObjective = true; 
 		Destroy(); 
 	}
