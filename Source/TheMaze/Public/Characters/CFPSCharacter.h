@@ -29,8 +29,8 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Gameplay")
 	bool bIsCarryingObjective;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction")
-	int Score;
+	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
+	int iScore;
 
 protected:
 

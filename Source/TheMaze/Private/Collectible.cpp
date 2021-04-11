@@ -43,7 +43,7 @@ void ACollectible::NotifyActorBeginOverlap(AActor* OtherActor)
 	ACFPSCharacter* MyCharacter = Cast <ACFPSCharacter>(OtherActor);
 	if(MyCharacter)
 	{
-		MyCharacter->Score++; 
+		MyCharacter->iScore++; 
 		MyCharacter->bIsCarryingObjective = true; 
 		Destroy(); 
 	}
