@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "InteractInterface.h"
 #include "InteractableBase.generated.h"
 
 UCLASS()
-class THEMAZE_API AInteractableBase : public AActor
+class THEMAZE_API AInteractableBase : public AActor, public IInteractInterface
 {
 	GENERATED_BODY()
 	
@@ -22,5 +23,15 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interaction")
+	void OnInteract(AActor* Caller);
+	virtual void OnInteract_Implementation(AActor* Caller); // Implementation for Blueprint
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interaction")
+	void StartFocus();
+	virtual void StartFocus_Implementation();// Implementation for Blueprint
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Interaction")
+	void EndFocus();
+	virtual void EndFocus_Implementation(); // Implementation for Blueprint
 
 };

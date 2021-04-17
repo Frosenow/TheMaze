@@ -12,3 +12,5 @@ D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Sprin
 D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
 D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Source\TheMaze\Public\InteractInterface.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Inc\TheMaze\InteractInterface.generated.h

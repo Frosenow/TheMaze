@@ -5,6 +5,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/Controller.h"
 #include "DrawDebugHelpers.h"
+#include "InteractInterface.h"
 
 
 
@@ -12,7 +13,7 @@
 ACFPSCharacter::ACFPSCharacter()
 {
  	// Set this character to call Tick() every frame. 
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
 	SpringArmComp->SetupAttachment(RootComponent); //Setting hierarchy for components, the RootComponent is the main Component in hierarchy 
@@ -29,6 +30,11 @@ ACFPSCharacter::ACFPSCharacter()
 	iScore = 0; 
 }
 
+
+void ACFPSCharacter::Tick(float DeltaTime)
+{
+	TraceForward();  
+}
 
 void ACFPSCharacter::MoveForward(float Value)
 {
@@ -70,6 +76,15 @@ void ACFPSCharacter::LookUpAtRate(float Value)
 void ACFPSCharacter::InteractPressed()
 {
 	TraceForward(); 
+	if (FocusedActor)
+	{
+		IInteractInterface* Interface = Cast<IInteractInterface>(FocusedActor);
+		if (Interface)
+		{
+			Interface->Execute_OnInteract(FocusedActor, this);
+		}
+	}
+	
 }
 
 // Finds the character viewpoint and trace forward into the world
@@ -87,12 +102,48 @@ void ACFPSCharacter::TraceForward_Implementation()
 	FCollisionQueryParams TraceParams;
 	bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, TraceParams);
 
-	DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 2.0f);
+	//DrawDebugLine(GetWorld(), Start, End, FColor::Orange, false, 2.0f);
 
-	// Create HitBox if TraceLine hit object
+	// Create HitBox if TraceLine hit object (check if the actor hit an object) 
 	if (bHit)
 	{
-		DrawDebugBox(GetWorld(), Hit.ImpactPoint, FVector(8, 8, 8), FColor::Red, false, 2.0f);
+		//DrawDebugBox(GetWorld(), Hit.ImpactPoint, FVector(8, 8, 8), FColor::Red, false, 2.0f);
+
+		AActor* Interactable = Hit.GetActor(); // Reference to what the actor hitted 
+
+		if (Interactable)
+		{
+			if (Interactable != FocusedActor) // Check if ther is any "FocusedActor" 
+			{
+				if (FocusedActor)
+				{
+					IInteractInterface* Interface = Cast<IInteractInterface>(FocusedActor);
+					if (Interface)
+					{
+						Interface->Execute_EndFocus(FocusedActor); 
+					}
+				}
+				IInteractInterface* Interface = Cast<IInteractInterface>(Interactable);
+				if (Interface)
+				{
+					Interface->Execute_StartFocus(Interactable);
+				}
+				FocusedActor = Interactable; 
+				
+			}
+		}
+		else
+		{
+			if (FocusedActor)
+			{
+				IInteractInterface* Interface = Cast<IInteractInterface>(FocusedActor);
+				if (Interface)
+				{
+					Interface->Execute_EndFocus(FocusedActor);
+				}
+			}
+			FocusedActor = nullptr; 
+		}
 	}
 }
 

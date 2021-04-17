@@ -1,0 +1,3 @@
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Development\TheMaze\Definitions.TheMaze.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Source\TheMaze\Public\Interact/InteractInterface.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Inc\TheMaze\InteractInterface.generated.h
