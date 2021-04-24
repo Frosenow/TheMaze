@@ -2,6 +2,7 @@
 #include "Components/BoxComponent.h"
 #include "Characters/CFPSCharacter.h"
 #include "Collectible.h"
+#include "MazeGamemode.h"
 
 // Sets default values
 AFPSExtractionZone::AFPSExtractionZone()
@@ -45,6 +46,11 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 	{
 		// Send output log if actor overlap with BoxZone and is carrying an objective
 		UE_LOG(LogTemp, Log, TEXT("Pawn overlapped with extractione zone"));
+		AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
+		if (GM) // if sucessfully got the gamemode
+		{
+			GM->CompleteMission(MyPawn); 
+		}
 	}
 }
 
