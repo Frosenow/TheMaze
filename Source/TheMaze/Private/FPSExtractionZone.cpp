@@ -23,6 +23,7 @@ AFPSExtractionZone::AFPSExtractionZone()
 	// *TEST FUNCTION - Trying different method* 
 	BoxZone->OnComponentBeginOverlap.AddDynamic(this, &AFPSExtractionZone::HandleOverlap); // AddDynamic is a macro that "unfold" into a function, intellisence dont see it
 
+	PointsToCollect = 0; 
 }
 
 // Called when the game starts or when spawned
@@ -47,7 +48,7 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 		// Send output log if actor overlap with BoxZone and is carrying an objective
 		UE_LOG(LogTemp, Log, TEXT("Pawn overlapped with extractione zone"));
 		AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
-		if (GM) // if sucessfully got the gamemode
+		if (GM && MyPawn->iScore == PointsToCollect) // if sucessfully got the gamemode
 		{
 			GM->CompleteMission(MyPawn); 
 		}

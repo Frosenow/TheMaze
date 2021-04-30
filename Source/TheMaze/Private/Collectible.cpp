@@ -23,7 +23,7 @@ ACollectible::ACollectible()
 void ACollectible::BeginPlay()
 {
 	Super::BeginPlay();
-	PlayEffects(); 	
+	PlayEffects();
 }
 
 void ACollectible::PlayEffects()

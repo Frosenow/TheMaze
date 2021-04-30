@@ -13,11 +13,11 @@ class THEMAZE_API AMazeGameMode : public AGameModeBase
 protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Spectating")
-	TSubclassOf<AActor> SpectatingViewpointClass;
+	TSubclassOf<AActor> SpectatingViewpointClass; // TSubclassOf lists only <AActor> specify classes 
 
 public:
 
-	void CompleteMission(APawn* MainPawn);
+	void CompleteMission(APawn* MainPawn); 
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
 	void OnMissionCompleted(APawn* MainPawn);

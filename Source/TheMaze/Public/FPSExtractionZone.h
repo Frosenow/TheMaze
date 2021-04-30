@@ -17,6 +17,9 @@ public:
 	// Sets default values for this actor's properties
 	AFPSExtractionZone();
 
+	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
+	unsigned int PointsToCollect;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

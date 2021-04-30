@@ -32,6 +32,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int iScore;
 
+
 protected:
 
 	void MoveForward(float Value);
