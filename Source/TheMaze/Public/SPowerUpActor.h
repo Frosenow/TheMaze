@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UDecalComponent; 
+class ASPowerup; 
 
 UCLASS()
 class THEMAZE_API ASPowerUpActor : public AActor
@@ -28,6 +29,17 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UDecalComponent* DecalComp; 
 
+	UPROPERTY(EditDefaultsOnly, Category = "PickupActor")
+	TSubclassOf <ASPowerup> PowerUpClass; 
+
+	ASPowerup* PowerUpInstance; 
+
+	UPROPERTY(EditDefaultsOnly, Category = "PickupActor")
+	float CoolDownDuration; 
+
+	FTimerHandle TimerHandle_RespawnTimer; 
+
+	void Respawn(); 
 
 
 public:

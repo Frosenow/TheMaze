@@ -1,6 +1,8 @@
 #include "SPowerUpActor.h"
 #include "Components/SphereComponent.h"
 #include "Components/DecalComponent.h"
+#include "TimerManager.h"
+#include "SPowerup.h"
 
 // Sets default values
 ASPowerUpActor::ASPowerUpActor()
@@ -18,14 +20,36 @@ ASPowerUpActor::ASPowerUpActor()
 // Called when the game starts or when spawned
 void ASPowerUpActor::BeginPlay()
 {
-	Super::BeginPlay();	
+	Super::BeginPlay();
+
+	Respawn(); 
+}
+
+void ASPowerUpActor::Respawn()
+{
+	if (PowerUpClass == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("PowerUpClass is nullptr."));
+		return; 
+	}
+	FActorSpawnParameters SpawnParams; 
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn; 
+
+	PowerUpInstance = GetWorld()->SpawnActor<ASPowerup>(PowerUpClass, GetTransform(), SpawnParams);
 }
 
 void ASPowerUpActor::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 
-	// NOT FINISHED 
+	if (PowerUpInstance)
+	{
+		PowerUpInstance->ActivatePowerup(); 
+		PowerUpInstance = nullptr; 
+
+		// Sets timer to respawn
+		GetWorldTimerManager().SetTimer(TimerHandle_RespawnTimer, this, &ASPowerUpActor::Respawn, CoolDownDuration);
+	}
 }
 
 
