@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TheMaze.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F7D35103-19D0-47AE-99F2-7C4895471629}</UniqueIdentifier>
+      <UniqueIdentifier>{25713E2E-7D11-4020-BACE-421576892D30}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TheMaze.Target.cs">
       <Filter>Source</Filter>
@@ -19,7 +19,7 @@
     <None Include="..\..\Maze_Walls_Solution.png" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{CE106FC9-F14B-4DCE-B324-2E489368103D}</UniqueIdentifier>
+      <UniqueIdentifier>{351F9B41-357B-4039-849C-1C13EE4DAD03}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -34,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TheMaze">
-      <UniqueIdentifier>{73619247-4CD1-47DA-B9AE-6C26908E33BF}</UniqueIdentifier>
+      <UniqueIdentifier>{FB9488DC-2AE1-490F-9E3D-3BA1B3C8E691}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TheMaze\TheMaze.Build.cs">
       <Filter>Source\TheMaze</Filter>
@@ -46,7 +46,7 @@
       <Filter>Source\TheMaze</Filter>
     </ClInclude>
     <Filter Include="Source\TheMaze\Private">
-      <UniqueIdentifier>{3BAE03B7-A626-467A-A80B-E927E21DEFC8}</UniqueIdentifier>
+      <UniqueIdentifier>{E5D56120-5EEF-4AA1-8D9E-CD304A7C0A22}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TheMaze\Private\Collectible.cpp">
       <Filter>Source\TheMaze\Private</Filter>
@@ -66,14 +66,20 @@
     <ClCompile Include="..\..\Source\TheMaze\Private\MazeGameMode.cpp">
       <Filter>Source\TheMaze\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\TheMaze\Private\SPowerup.cpp">
+      <Filter>Source\TheMaze\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TheMaze\Private\SPowerUpActor.cpp">
+      <Filter>Source\TheMaze\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\TheMaze\Private\Characters">
-      <UniqueIdentifier>{9AF4DA42-6799-459F-9EDB-419F06F503D4}</UniqueIdentifier>
+      <UniqueIdentifier>{389EC50B-A3BC-497A-A54C-FC72F0B9A176}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TheMaze\Private\Characters\CFPSCharacter.cpp">
       <Filter>Source\TheMaze\Private\Characters</Filter>
     </ClCompile>
     <Filter Include="Source\TheMaze\Public">
-      <UniqueIdentifier>{95711704-0073-4994-A8BB-F53F8124592D}</UniqueIdentifier>
+      <UniqueIdentifier>{62BA9A7B-E0B5-493E-A643-86EC956A2556}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TheMaze\Public\FPSExtractionZone.h">
       <Filter>Source\TheMaze\Public</Filter>
@@ -87,8 +93,14 @@
     <ClInclude Include="..\..\Source\TheMaze\Public\MazeGameMode.h">
       <Filter>Source\TheMaze\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\TheMaze\Public\SPowerup.h">
+      <Filter>Source\TheMaze\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TheMaze\Public\SPowerUpActor.h">
+      <Filter>Source\TheMaze\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\TheMaze\Public\Characters">
-      <UniqueIdentifier>{D9743C96-84BA-41EF-B93D-E554F1B9ADC5}</UniqueIdentifier>
+      <UniqueIdentifier>{C9A9D061-AD53-4F2A-A770-270630D62DE4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TheMaze\Public\Characters\CFPSCharacter.h">
       <Filter>Source\TheMaze\Public\Characters</Filter>

@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "SPowerUpActor.generated.h"
 
+class USphereComponent;
+class UDecalComponent; 
+
 UCLASS()
 class THEMAZE_API ASPowerUpActor : public AActor
 {
@@ -18,9 +21,16 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USphereComponent* SphereComp; 
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UDecalComponent* DecalComp; 
 
+
+
+public:
+
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override; 
 };
