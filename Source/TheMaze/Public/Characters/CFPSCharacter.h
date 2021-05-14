@@ -32,14 +32,24 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int iScore;
 
+	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
+	int32 iSeconds;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
+	int32 iMinutes;
+
+	FTimerHandle FTimerHandle_Countdown;
 
 protected:
+
+	virtual void BeginPlay() override;
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void TurnUpRate(float Value);
 	void LookUpAtRate(float Value);
 	void InteractPressed(); 
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Play")
 	float BaseTurnRate;
@@ -60,6 +70,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+	void Countdown();
 
 private:
 

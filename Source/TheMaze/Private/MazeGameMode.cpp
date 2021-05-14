@@ -33,3 +33,4 @@ void AMazeGameMode::CompleteMission(APawn* MainPawn)
 	}
 	OnMissionCompleted(MainPawn);
 }
+

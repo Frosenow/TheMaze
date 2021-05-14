@@ -7,6 +7,14 @@ D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMot
 D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Inc\TheMaze\CFPSCharacter.generated.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Source\TheMaze\Public\MazeGamemode.h
+D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Inc\TheMaze\MazeGameMode.generated.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Source\TheMaze\Public\FPSExtractionZone.h
+C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\Inc\TheMaze\FPSExtractionZone.generated.h
 D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
 D:\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
 D:\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h

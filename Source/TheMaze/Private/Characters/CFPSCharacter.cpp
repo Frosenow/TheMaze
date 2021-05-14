@@ -1,4 +1,6 @@
 #include "Characters/CFPSCharacter.h"
+#include "MazeGamemode.h"
+#include "FPSExtractionZone.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -27,13 +29,21 @@ ACFPSCharacter::ACFPSCharacter()
 	BaseTurnRate = 45.0f;
 	BaseLookUpRate = 45.0f;
 	TraceDistance = 2000;
-	iScore = 0; 
+	iScore = 0;
+	iSeconds = 10;
+	iMinutes = 3; 
 }
 
+void ACFPSCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	GetWorldTimerManager().SetTimer(FTimerHandle_Countdown, this, &ACFPSCharacter::Countdown, 0.3f, true, 2.0f);
+
+}
 
 void ACFPSCharacter::Tick(float DeltaTime)
 {
-	TraceForward();  
+	TraceForward(); 
 }
 
 void ACFPSCharacter::MoveForward(float Value)
@@ -167,11 +177,22 @@ void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 	PlayerInputComponent->BindAxis("TurnRate", this, &ACFPSCharacter::TurnUpRate);
 	PlayerInputComponent->BindAxis("LookRate", this, &ACFPSCharacter::LookUpAtRate);
-
-
-
-
-
-
 }
 
+void ACFPSCharacter::Countdown()
+{
+	iSeconds -= 1; 
+	if (iSeconds <= 0)
+	{
+		if (iMinutes > 0)
+		{
+			iSeconds = 59; 
+			iMinutes -= 1; 
+		}
+		else
+		{
+			GetWorldTimerManager().ClearTimer(FTimerHandle_Countdown);
+		}
+			
+	}
+}

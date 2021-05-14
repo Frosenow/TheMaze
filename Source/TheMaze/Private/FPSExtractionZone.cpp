@@ -50,7 +50,7 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 		AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
 		if (GM && MyPawn->iScore == PointsToCollect) // if sucessfully got the gamemode
 		{
-			GM->CompleteMission(MyPawn); 
+			GM->CompleteMission(MyPawn);
 		}
 	}
 }

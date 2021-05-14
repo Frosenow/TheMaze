@@ -96,6 +96,14 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_iScore;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_iSeconds_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_iSeconds;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_iMinutes_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_iMinutes;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
@@ -170,6 +178,20 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iScore = { "iScore", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iScore), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iScore_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData[] = {
+		{ "Category", "Interaction" },
+		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds = { "iSeconds", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iSeconds), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData[] = {
+		{ "Category", "Interaction" },
+		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes = { "iMinutes", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iMinutes), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Play" },
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
@@ -196,6 +218,8 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_MeshComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_bIsCarryingObjective,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iScore,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TraceDistance,
@@ -227,7 +251,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACFPSCharacter, 3435861238);
+	IMPLEMENT_CLASS(ACFPSCharacter, 3714425763);
 	template<> THEMAZE_API UClass* StaticClass<ACFPSCharacter>()
 	{
 		return ACFPSCharacter::StaticClass();
