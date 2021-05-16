@@ -1,0 +1,30 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TheMaze-6229-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\TheMazeEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.ShadowErrors.h.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\CFPSCharacter.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\Collectible.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\FPSExtractionZone.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\InteractableBase.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\InteractInterface.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\MazeGameMode.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerup.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerUpActor.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\TheMaze.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\CFPSCharacter.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\Collectible.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\FPSExtractionZone.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\InteractableBase.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\InteractInterface.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\MazeGameMode.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerup.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerUpActor.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\TheMaze.init.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\Default.rc2.res"
+/OUT:"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\UE4Editor-TheMaze-6229-Win64-DebugGame.lib"
+/INCLUDE:IMPLEMENT_MODULE_TheMaze

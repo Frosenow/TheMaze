@@ -13,21 +13,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define THEMAZE_CFPSCharacter_generated_h
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_SPARSE_DATA
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS \
 	virtual void TraceForward_Implementation(); \
  \
 	DECLARE_FUNCTION(execTraceForward);
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execTraceForward);
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_EVENT_PARMS
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_EVENT_PARMS
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_CALLBACK_WRAPPERS
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACFPSCharacter(); \
 	friend struct Z_Construct_UClass_ACFPSCharacter_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ACFPSCharacter)
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesACFPSCharacter(); \
 	friend struct Z_Construct_UClass_ACFPSCharacter_Statics; \
@@ -45,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(ACFPSCharacter)
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_STANDARD_CONSTRUCTORS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACFPSCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACFPSCharacter) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_ENHANCED_CONSTRUCTORS \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACFPSCharacter(ACFPSCharacter&&); \
@@ -69,38 +69,38 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACFPSCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACFPSCharacter)
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BaseTurnRate() { return STRUCT_OFFSET(ACFPSCharacter, BaseTurnRate); } \
 	FORCEINLINE static uint32 __PPO__BaseLookUpRate() { return STRUCT_OFFSET(ACFPSCharacter, BaseLookUpRate); } \
 	FORCEINLINE static uint32 __PPO__TraceDistance() { return STRUCT_OFFSET(ACFPSCharacter, TraceDistance); }
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_10_PROLOG \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_EVENT_PARMS
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_12_PROLOG \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_EVENT_PARMS
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_GENERATED_BODY_LEGACY \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_STANDARD_CONSTRUCTORS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_SPARSE_DATA \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_CALLBACK_WRAPPERS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_INCLASS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_GENERATED_BODY \
+#define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_SPARSE_DATA \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_CALLBACK_WRAPPERS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
-	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_13_ENHANCED_CONSTRUCTORS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_SPARSE_DATA \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_CALLBACK_WRAPPERS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_INCLASS_NO_PURE_DECLS \
+	TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

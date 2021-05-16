@@ -1,6 +1,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/PlayerController.h"
 #include "CFPSCharacter.generated.h"
+
 
 //Classes added to show the compiler what to do
 class USpringArmComponent;
@@ -32,13 +34,15 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int iScore;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
+	UPROPERTY(EditDefaultsOnly, Category = "Interaction")
 	int32 iSeconds;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
+	UPROPERTY(EditDefaultsOnly, Category = "Interaction")
 	int32 iMinutes;
 
 	FTimerHandle FTimerHandle_Countdown;
+
+	bool Timer_Start; 
 
 protected:
 
@@ -63,6 +67,8 @@ protected:
 	UFUNCTION(BlueprintNativeEvent)
 	void TraceForward();
 	void TraceForward_Implementation(); 
+
+	void AnyKey(FKey Key);
 
 public:	
 

@@ -183,14 +183,14 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds = { "iSeconds", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iSeconds), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds = { "iSeconds", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iSeconds), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData[] = {
 		{ "Category", "Interaction" },
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes = { "iMinutes", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iMinutes), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes = { "iMinutes", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iMinutes), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Play" },
@@ -251,7 +251,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACFPSCharacter, 3714425763);
+	IMPLEMENT_CLASS(ACFPSCharacter, 998521709);
 	template<> THEMAZE_API UClass* StaticClass<ACFPSCharacter>()
 	{
 		return ACFPSCharacter::StaticClass();

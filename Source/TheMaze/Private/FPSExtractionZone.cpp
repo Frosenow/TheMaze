@@ -48,6 +48,8 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 		// Send output log if actor overlap with BoxZone and is carrying an objective
 		UE_LOG(LogTemp, Log, TEXT("Pawn overlapped with extractione zone"));
 		AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
+		//ACFPSCharacter* MyPawn = Cast<ACFPSCharacter>(MainPawn);
+		GetWorldTimerManager().ClearTimer(MyPawn->FTimerHandle_Countdown);
 		if (GM && MyPawn->iScore == PointsToCollect) // if sucessfully got the gamemode
 		{
 			GM->CompleteMission(MyPawn);

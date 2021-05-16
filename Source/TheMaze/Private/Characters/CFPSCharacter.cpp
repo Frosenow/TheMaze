@@ -30,14 +30,16 @@ ACFPSCharacter::ACFPSCharacter()
 	BaseLookUpRate = 45.0f;
 	TraceDistance = 2000;
 	iScore = 0;
-	iSeconds = 10;
-	iMinutes = 3; 
+
+	iSeconds = 15;
+	iMinutes = 0;
+	Timer_Start = true; 
 }
 
 void ACFPSCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	GetWorldTimerManager().SetTimer(FTimerHandle_Countdown, this, &ACFPSCharacter::Countdown, 0.3f, true, 2.0f);
+	
 
 }
 
@@ -177,6 +179,8 @@ void ACFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 	PlayerInputComponent->BindAxis("TurnRate", this, &ACFPSCharacter::TurnUpRate);
 	PlayerInputComponent->BindAxis("LookRate", this, &ACFPSCharacter::LookUpAtRate);
+
+	PlayerInputComponent->BindAction("AnyKey", IE_Released, this, &ACFPSCharacter::AnyKey);
 }
 
 void ACFPSCharacter::Countdown()
@@ -191,8 +195,23 @@ void ACFPSCharacter::Countdown()
 		}
 		else
 		{
+			//ACFPSCharacter* MyPawn = Cast<ACFPSCharacter>(AActor* OtherActor);
+			AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
 			GetWorldTimerManager().ClearTimer(FTimerHandle_Countdown);
+			GM->CompleteMission(this);
+			
 		}
 			
 	}
+}
+
+// Starts counting down only when the button is pressed
+void ACFPSCharacter::AnyKey(FKey Key)
+{
+	if (Timer_Start)
+	{
+		Timer_Start = false;
+		GetWorldTimerManager().SetTimer(FTimerHandle_Countdown, this, &ACFPSCharacter::Countdown, 1.0f, true);
+	}
+			
 }
