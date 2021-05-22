@@ -34,10 +34,10 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int iScore;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Interaction")
+	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int32 iSeconds;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Interaction")
+	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int32 iMinutes;
 
 	FTimerHandle FTimerHandle_Countdown;
