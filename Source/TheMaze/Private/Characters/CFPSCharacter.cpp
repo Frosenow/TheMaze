@@ -33,6 +33,7 @@ ACFPSCharacter::ACFPSCharacter()
 
 	iSeconds = 15;
 	iMinutes = 0;
+	TimerRatio = 0.5f;
 	Timer_Start = true; 
 }
 
@@ -211,7 +212,7 @@ void ACFPSCharacter::AnyKey(FKey Key)
 	if (Timer_Start)
 	{
 		Timer_Start = false;
-		GetWorldTimerManager().SetTimer(FTimerHandle_Countdown, this, &ACFPSCharacter::Countdown, 1.0f, true);
+		GetWorldTimerManager().SetTimer(FTimerHandle_Countdown, this, &ACFPSCharacter::Countdown, TimerRatio, true);
 	}
 			
 }
