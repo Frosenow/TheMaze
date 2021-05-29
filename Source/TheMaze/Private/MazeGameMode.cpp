@@ -1,15 +1,16 @@
 #include "MazeGameMode.h"
 #include "Characters/CFPSCharacter.h"
 #include "Kismet/GameplayStatics.h"
+#include "FPSExtractionZone.h"
 
 
 
 void AMazeGameMode::CompleteMission(APawn* MainPawn)
-{
+{ 
 	if (MainPawn)
 	{
 		MainPawn->DisableInput(nullptr); // Disable control - walking etc. - of the player (pawn)
-		
+
 		if (SpectatingViewpointClass) // Make sure that is not a nullptr
 		{
 			TArray <AActor*> ReturnedActors;
@@ -29,8 +30,9 @@ void AMazeGameMode::CompleteMission(APawn* MainPawn)
 		else
 		{
 			UE_LOG(LogTemp, Warning, TEXT("SpectatingViewpointClass is nullptr. Cannot change spectatig view target"));
-		}
+		}	
 	}
 	OnMissionCompleted(MainPawn);
+	
 }
 
