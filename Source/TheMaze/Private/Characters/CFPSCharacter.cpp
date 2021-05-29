@@ -199,7 +199,7 @@ void ACFPSCharacter::Countdown()
 			//ACFPSCharacter* MyPawn = Cast<ACFPSCharacter>(AActor* OtherActor);
 			AMazeGameMode* GM = Cast<AMazeGameMode>(GetWorld()->GetAuthGameMode()); // Getting the gamemode
 			GetWorldTimerManager().ClearTimer(FTimerHandle_Countdown);
-			GM->OnMissionFailed();
+			GM->OnMissionFailed(this);
 		}
 			
 	}

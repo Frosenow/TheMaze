@@ -23,6 +23,6 @@ public:
 	void OnMissionCompleted(APawn* MainPawn);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
-	void OnMissionFailed();
+	void OnMissionFailed(APawn* MainPawn);
 	
 };

@@ -21,6 +21,10 @@ class APawn;
 	struct MazeGameMode_eventOnMissionCompleted_Parms \
 	{ \
 		APawn* MainPawn; \
+	}; \
+	struct MazeGameMode_eventOnMissionFailed_Parms \
+	{ \
+		APawn* MainPawn; \
 	};
 
 

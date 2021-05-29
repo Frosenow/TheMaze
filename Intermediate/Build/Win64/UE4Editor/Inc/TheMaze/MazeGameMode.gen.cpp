@@ -29,9 +29,11 @@ void EmptyLinkFunctionForGeneratedCodeMazeGameMode() {}
 		ProcessEvent(FindFunctionChecked(NAME_AMazeGameMode_OnMissionCompleted),&Parms);
 	}
 	static FName NAME_AMazeGameMode_OnMissionFailed = FName(TEXT("OnMissionFailed"));
-	void AMazeGameMode::OnMissionFailed()
+	void AMazeGameMode::OnMissionFailed(APawn* MainPawn)
 	{
-		ProcessEvent(FindFunctionChecked(NAME_AMazeGameMode_OnMissionFailed),NULL);
+		MazeGameMode_eventOnMissionFailed_Parms Parms;
+		Parms.MainPawn=MainPawn;
+		ProcessEvent(FindFunctionChecked(NAME_AMazeGameMode_OnMissionFailed),&Parms);
 	}
 	void AMazeGameMode::StaticRegisterNativesAMazeGameMode()
 	{
@@ -67,10 +69,16 @@ void EmptyLinkFunctionForGeneratedCodeMazeGameMode() {}
 	}
 	struct Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics
 	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MainPawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::NewProp_MainPawn = { "MainPawn", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MazeGameMode_eventOnMissionFailed_Parms, MainPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::NewProp_MainPawn,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::Function_MetaDataParams[] = {
@@ -78,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeGameMode() {}
 		{ "ModuleRelativePath", "Public/MazeGameMode.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeGameMode, nullptr, "OnMissionFailed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMazeGameMode, nullptr, "OnMissionFailed", nullptr, nullptr, sizeof(MazeGameMode_eventOnMissionFailed_Parms), Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMazeGameMode_OnMissionFailed_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AMazeGameMode_OnMissionFailed()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -113,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeGameMode() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMazeGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMazeGameMode_OnMissionCompleted, "OnMissionCompleted" }, // 3245880262
-		{ &Z_Construct_UFunction_AMazeGameMode_OnMissionFailed, "OnMissionFailed" }, // 3897992566
+		{ &Z_Construct_UFunction_AMazeGameMode_OnMissionFailed, "OnMissionFailed" }, // 3492589543
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMazeGameMode_Statics::Class_MetaDataParams[] = {
@@ -160,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeMazeGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMazeGameMode, 908969438);
+	IMPLEMENT_CLASS(AMazeGameMode, 1166126277);
 	template<> THEMAZE_API UClass* StaticClass<AMazeGameMode>()
 	{
 		return AMazeGameMode::StaticClass();
