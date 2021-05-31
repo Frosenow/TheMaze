@@ -21,6 +21,14 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ACFPSCharacter::execTimerPowerup)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_TimeAmount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TimerPowerup(Z_Param_TimeAmount);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ACFPSCharacter::execTraceForward)
 	{
 		P_FINISH;
@@ -37,9 +45,43 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 	{
 		UClass* Class = ACFPSCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "TimerPowerup", &ACFPSCharacter::execTimerPowerup },
 			{ "TraceForward", &ACFPSCharacter::execTraceForward },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics
+	{
+		struct CFPSCharacter_eventTimerPowerup_Parms
+		{
+			int32 TimeAmount;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_TimeAmount;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::NewProp_TimeAmount = { "TimeAmount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(CFPSCharacter_eventTimerPowerup_Parms, TimeAmount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::NewProp_TimeAmount,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::Function_MetaDataParams[] = {
+		{ "Category", "TimeComponents" },
+		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACFPSCharacter, nullptr, "TimerPowerup", nullptr, nullptr, sizeof(CFPSCharacter_eventTimerPowerup_Parms), Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACFPSCharacter_TimerPowerup()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACFPSCharacter_TimerPowerup_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ACFPSCharacter_TraceForward_Statics
 	{
@@ -128,6 +170,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TheMaze,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACFPSCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACFPSCharacter_TimerPowerup, "TimerPowerup" }, // 290936310
 		{ &Z_Construct_UFunction_ACFPSCharacter_TraceForward, "TraceForward" }, // 404003032
 	};
 #if WITH_METADATA
@@ -187,21 +230,21 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds = { "iSeconds", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iSeconds), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds = { "iSeconds", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iSeconds), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iSeconds_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData[] = {
 		{ "Category", "Interaction" },
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes = { "iMinutes", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iMinutes), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes = { "iMinutes", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, iMinutes), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_iMinutes_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio_MetaData[] = {
 		{ "Category", "Interaction" },
 		{ "ModuleRelativePath", "Public/Characters/CFPSCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio = { "TimerRatio", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, TimerRatio), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio = { "TimerRatio", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFPSCharacter, TimerRatio), METADATA_PARAMS(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_TimerRatio_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACFPSCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Play" },
@@ -263,7 +306,7 @@ void EmptyLinkFunctionForGeneratedCodeCFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACFPSCharacter, 4234452672);
+	IMPLEMENT_CLASS(ACFPSCharacter, 503359990);
 	template<> THEMAZE_API UClass* StaticClass<ACFPSCharacter>()
 	{
 		return ACFPSCharacter::StaticClass();

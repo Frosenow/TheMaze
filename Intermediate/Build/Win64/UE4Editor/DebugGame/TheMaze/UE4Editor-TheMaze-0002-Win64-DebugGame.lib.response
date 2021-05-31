@@ -8,6 +8,7 @@
 /NODEFAULTLIB
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\TheMazeEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.ShadowErrors.h.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\CFPSCharacter.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\TimeComponent.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\Collectible.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\FPSExtractionZone.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\InteractableBase.cpp.obj"
@@ -25,6 +26,7 @@
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerup.gen.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\SPowerUpActor.gen.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\TheMaze.init.gen.cpp.obj"
+"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\TimeComponent.gen.cpp.obj"
 "C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\Default.rc2.res"
 /OUT:"C:\1 Projekt Obiektowe\TheMazeGame\TheMaze\TheMaze\Intermediate\Build\Win64\UE4Editor\DebugGame\TheMaze\UE4Editor-TheMaze-0002-Win64-DebugGame.lib"
 /INCLUDE:IMPLEMENT_MODULE_TheMaze

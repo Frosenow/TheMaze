@@ -34,15 +34,15 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Interaction")
 	int iScore;
 
-	UPROPERTY(EditAnywhere, Category = "Interaction")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	int32 iSeconds;
 
-	UPROPERTY(EditAnywhere, Category = "Interaction")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	int32 iMinutes;
 
 	FTimerHandle FTimerHandle_Countdown;
 
-	UPROPERTY(EditAnywhere, Category = "Interaction")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	float TimerRatio; 
 
 	bool Timer_Start; 
@@ -81,6 +81,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
 	void Countdown();
+
+	UFUNCTION(BlueprintCallable, Category = "TimeComponents")
+	void TimerPowerup(int TimeAmount);
 
 private:
 

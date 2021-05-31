@@ -1,4 +1,5 @@
 #include "Characters/CFPSCharacter.h"
+#include "Math/UnrealMathUtility.h"
 #include "MazeGamemode.h"
 #include "FPSExtractionZone.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -189,10 +190,11 @@ void ACFPSCharacter::Countdown()
 	iSeconds -= 1; 
 	if (iSeconds <= 0)
 	{
+		
 		if (iMinutes > 0)
 		{
 			iSeconds = 59; 
-			iMinutes -= 1; 
+			iMinutes -= 1; 	
 		}
 		else
 		{
@@ -203,6 +205,29 @@ void ACFPSCharacter::Countdown()
 		}
 			
 	}
+}
+
+void ACFPSCharacter::TimerPowerup(int TimeAmount)
+{
+	UE_LOG(LogTemp, Log, TEXT("Time Changed: (+%s)"), *FString::SanitizeFloat(TimeAmount));
+	if (TimeAmount <= 0.0f)
+		return;
+	else
+	{
+		if (iSeconds + TimeAmount >= 59)
+		{
+			int SecondsTemp = 0; 
+			iMinutes = iMinutes + ((iSeconds + TimeAmount) / 60);
+			SecondsTemp = ((iSeconds + TimeAmount) % 60);
+			iSeconds = 0; 
+			iSeconds = SecondsTemp; 
+			
+		}
+		else
+			iSeconds = iSeconds + TimeAmount;
+			
+	}
+		 
 }
 
 // Starts counting down only when the button is pressed

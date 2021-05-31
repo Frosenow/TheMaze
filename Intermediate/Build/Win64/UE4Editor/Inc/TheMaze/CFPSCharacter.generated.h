@@ -17,11 +17,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS \
 	virtual void TraceForward_Implementation(); \
  \
+	DECLARE_FUNCTION(execTimerPowerup); \
 	DECLARE_FUNCTION(execTraceForward);
 
 
 #define TheMaze_Source_TheMaze_Public_Characters_CFPSCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execTimerPowerup); \
 	DECLARE_FUNCTION(execTraceForward);
 
 

@@ -87,14 +87,14 @@ void EmptyLinkFunctionForGeneratedCodeSPowerUpActor() {}
 		{ "ModuleRelativePath", "Public/SPowerUpActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass = { "PowerUpClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASPowerUpActor, PowerUpClass), Z_Construct_UClass_ASPowerup_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass = { "PowerUpClass", nullptr, (EPropertyFlags)0x0024080000000801, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASPowerUpActor, PowerUpClass), Z_Construct_UClass_ASPowerup_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_PowerUpClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration_MetaData[] = {
 		{ "Category", "PickupActor" },
 		{ "ModuleRelativePath", "Public/SPowerUpActor.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration = { "CoolDownDuration", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASPowerUpActor, CoolDownDuration), METADATA_PARAMS(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration = { "CoolDownDuration", nullptr, (EPropertyFlags)0x0020080000000801, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASPowerUpActor, CoolDownDuration), METADATA_PARAMS(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_CoolDownDuration_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASPowerUpActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_SphereComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASPowerUpActor_Statics::NewProp_DecalComp,
@@ -128,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeSPowerUpActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASPowerUpActor, 503043492);
+	IMPLEMENT_CLASS(ASPowerUpActor, 1742175414);
 	template<> THEMAZE_API UClass* StaticClass<ASPowerUpActor>()
 	{
 		return ASPowerUpActor::StaticClass();
