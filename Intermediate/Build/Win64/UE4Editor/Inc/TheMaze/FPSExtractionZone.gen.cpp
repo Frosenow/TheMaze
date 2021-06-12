@@ -138,7 +138,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PointsToCollect_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FUnsizedFIntPropertyParams NewProp_PointsToCollect;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_PointsToCollect;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoxZone_MetaData[];
 #endif
@@ -166,7 +166,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 		{ "ModuleRelativePath", "Public/FPSExtractionZone.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedFIntPropertyParams Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect = { "PointsToCollect", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExtractionZone, PointsToCollect), METADATA_PARAMS(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect = { "PointsToCollect", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExtractionZone, PointsToCollect), METADATA_PARAMS(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_PointsToCollect_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_BoxZone_MetaData[] = {
 		{ "Category", "FPSExtractionZone" },
@@ -206,7 +206,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSExtractionZone, 780202759);
+	IMPLEMENT_CLASS(AFPSExtractionZone, 2943469113);
 	template<> THEMAZE_API UClass* StaticClass<AFPSExtractionZone>()
 	{
 		return AFPSExtractionZone::StaticClass();
