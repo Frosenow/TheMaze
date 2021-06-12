@@ -1,4 +1,4 @@
-#include "CoreMinimal.h"
+include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/PlayerController.h"
 #include "CFPSCharacter.generated.h"
@@ -40,6 +40,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	int32 iMinutes;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	FTimerHandle FTimerHandle_Countdown;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
@@ -84,6 +85,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "TimeComponents")
 	void TimerPowerup(int TimeAmount);
+
 
 private:
 
