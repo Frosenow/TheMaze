@@ -1,5 +1,6 @@
 #include "FPSExtractionZone.h"
 #include "Components/BoxComponent.h"
+#include "Components/DecalComponent.h"
 #include "Characters/CFPSCharacter.h"
 #include "Collectible.h"
 #include "MazeGamemode.h"
@@ -24,6 +25,10 @@ AFPSExtractionZone::AFPSExtractionZone()
 	BoxZone->OnComponentBeginOverlap.AddDynamic(this, &AFPSExtractionZone::HandleOverlap); // AddDynamic is a macro that "unfold" into a function, intellisence dont see it
 
 	PointsToCollect = 0; 
+
+	DecalComp = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalComp"));
+	DecalComp->DecalSize = FVector(200.0f, 200.0f, 200.0f);
+	DecalComp->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned

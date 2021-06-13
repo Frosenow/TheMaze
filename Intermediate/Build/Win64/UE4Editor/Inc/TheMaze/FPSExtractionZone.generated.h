@@ -69,7 +69,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSExtractionZone); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSExtractionZone)
 
 
-#define TheMaze_Source_TheMaze_Public_FPSExtractionZone_h_14_PRIVATE_PROPERTY_OFFSET
+#define TheMaze_Source_TheMaze_Public_FPSExtractionZone_h_14_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__DecalComp() { return STRUCT_OFFSET(AFPSExtractionZone, DecalComp); }
+
+
 #define TheMaze_Source_TheMaze_Public_FPSExtractionZone_h_11_PROLOG
 #define TheMaze_Source_TheMaze_Public_FPSExtractionZone_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
